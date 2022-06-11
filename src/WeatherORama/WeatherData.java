@@ -1,3 +1,5 @@
+package WeatherORama;
+
 import Interfaces.Observer;
 import Interfaces.Subject;
 
@@ -35,6 +37,7 @@ public class WeatherData implements Subject {
 
     public void measurementsChanged() {
         notifyObservers();
+        System.out.println("-------------------------------------------------");
     }
 
     @Override
@@ -50,7 +53,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for(Observer observer:observerList) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 }

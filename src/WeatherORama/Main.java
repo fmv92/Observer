@@ -1,3 +1,9 @@
+package WeatherORama;
+
+import Displays.CurrentConditionsDisplay;
+import Displays.ForecastDisplay;
+import Displays.StatisticsDisplay;
+
 public class Main {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
